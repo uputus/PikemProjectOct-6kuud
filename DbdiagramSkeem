@@ -1,0 +1,82 @@
+Table movies {
+  movie_id int [pk]
+  title varchar
+  genre varchar
+  director varchar
+  cast text
+  age_rating varchar
+  duration_minutes int
+  language varchar
+  subtitles varchar
+  description text
+  trailer_url text
+  poster_url text
+  is_active boolean
+  created_at timestamp
+}
+
+Table halls {
+  hall_id int [pk]
+  name varchar
+  total_rows int
+  total_columns int
+  hall_type varchar
+}
+
+Table seats {
+  seat_id int [pk]
+  hall_id int [ref: > halls.hall_id]
+  row_number int
+  column_number int
+  is_wheelchair_accessible boolean
+}
+
+Table showtimes {
+  showtime_id int [pk]
+  movie_id int [ref: > movies.movie_id]
+  hall_id int [ref: > halls.hall_id]
+  start_time timestamp
+  format varchar
+  language varchar
+  subtitles varchar
+  ticket_sale_start timestamp
+  ticket_sale_end timestamp
+}
+
+Table tickets {
+  ticket_id int [pk]
+  showtime_id int [ref: > showtimes.showtime_id]
+  seat_id int [ref: > seats.seat_id]
+  user_id int [ref: > users.user_id]
+  ticket_type varchar
+  price decimal
+  status varchar
+  purchased_at timestamp
+}
+
+Table users {
+  user_id int [pk]
+  name varchar
+  email varchar
+  password_hash text
+  role varchar
+  created_at timestamp
+}
+
+Table audit_logs {
+  log_id int [pk]
+  user_id int [ref: > users.user_id]
+  action text
+  target_table varchar
+  target_id int
+  timestamp timestamp
+}
+
+Table payments {
+  payment_id int [pk]
+  ticket_id int [ref: > tickets.ticket_id]
+  amount decimal
+  payment_method varchar
+  payment_status varchar
+  payment_time timestamp
+}
