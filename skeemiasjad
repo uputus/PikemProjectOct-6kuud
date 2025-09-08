@@ -1,0 +1,133 @@
+🎟️ Kliendi nähtavad andmed (frontend)
+
+Kliendi jaoks on oluline ainult see info, mis aitab tal teha otsuseid ja toiminguid (nt broneerimine, ost, info vaatamine).
+
+1. Filmide info
+
+Filmi nimi
+
+Žanr
+
+Režissöör
+
+Näitlejad
+
+Vanusepiirang
+
+Kestus
+
+Keel / subtiitrid
+
+Lühikirjeldus
+
+Treiler (URL)
+
+Plakati pilt (URL)
+
+Seansside ajad
+
+2. Seansid
+
+Kuupäev ja kellaaeg
+
+Saali nimi
+
+Vabad kohad / saali plaan
+
+2D / 3D / IMAX märge
+
+Pileti hind
+
+3. Piletite broneerimine ja ost
+
+Valitud kohad
+
+Hindade arvutus (täis-/sooduspiletid)
+
+Maksevõimalused
+
+Ostutšeki info (PDF vms)
+
+4. Kliendi konto (valikuline)
+
+Nimi
+
+E-mail
+
+Broneeringute ajalugu
+
+Lemmikfilmid (valikuline)
+
+👨‍💻 Programmeerija nähtavad / kasutatavad andmed (backend)
+
+Arendaja ja süsteem peab teadma ka sisemisi ja tehnilisi andmeid, mida klient ei näe, kuid mis on süsteemi tööks olulised.
+
+1. Filmide andmed (täiendatult)
+
+Unikaalne ID (film_id)
+
+Lisainfo (nt distributsiooniõigused, lisamaterjalid)
+
+Andmebaasi sisestuse aeg
+
+Status (aktiivne / arhiivis)
+
+2. Seansid
+
+Seansi ID
+
+Filmiga seotud ID
+
+Saali ID
+
+Seansi tehnoloogia (2D, 3D, subtiitrid)
+
+Müügiperiood (millal alustatakse ja lõpetatakse piletite müük)
+
+Broneerimispoliitika (kui kaua broneering kehtib jne)
+
+3. Saalide struktuur
+
+Saali ID
+
+Istmete paigutus (ridade ja veergude arv)
+
+Erilised kohad (nt ratastoolikohad)
+
+Saali tüüp (nt väike, suur, IMAX jne)
+
+4. Piletid
+
+Pileti ID
+
+Seansi ID
+
+Istme number
+
+Pileti tüüp (täis, soodus, tasuta)
+
+Ostetud / broneeritud staatus
+
+Kasutaja ID (kui registreeritud)
+
+Makse ID (viide maksesüsteemile)
+
+5. Kasutajad / Administraatorid
+
+Kasutaja ID
+
+Roll (klient, administraator)
+
+Logimisandmed
+
+Broneeringute ajalugu
+
+Statistika ja logid
+
+6. Süsteemi logid / audit
+
+Kes muutis mida ja millal
+
+Makseprotsessi logid
+
+Broneeringu tühistamise põhjused jne
